@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>LunaMon MSS Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>LunaMon MSS Panel</h1>
+  <div id="status">🔑 Bitte mit Twitch verbinden...</div>
+  <button id="loginBtn">Mit Twitch verbinden</button>
+
+  <div id="controls" style="display:none;">
+    <div class="category"><h2>🎮 My Steam System</h2>
+      <button onclick="sendCommand('!mssinfo')">!mssinfo</button>
+      <button onclick="sendCommand('!allmss')">!allmss</button>
+      <input type="text" id="inputGive" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!give', 'inputGive')">!give</button>
+      <input type="text" id="inputLevelUp" placeholder="Level">
+      <button onclick="sendCommandWithUser('!levelkaufen', 'inputLevelUp')">!levelkaufen</button>
+      <input type="text" id="inputLevelDown" placeholder="Level">
+      <button onclick="sendCommandWithUser('!levelverkaufen', 'inputLevelDown')">!levelverkaufen</button>
+      <input type="text" id="inputProfil" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!profil', 'inputProfil')">!profil</button>
+      <button onclick="sendCommand('!lunamoninfo')">!lunamoninfo</button>
+    </div>
+
+    <div class="category"><h2>🌙 LunaMon</h2>
+      <button onclick="sendCommand('!schlafen')">!schlafen</button>
+      <button onclick="sendCommand('!füttern')">!füttern</button>
+      <button onclick="sendCommand('!reise')">!reise</button>
+      <button onclick="sendCommand('!freilassen')">!freilassen</button>
+      <button onclick="sendCommand('!kuscheln')">!kuscheln</button>
+      <button onclick="sendCommand('!pflege')">!pflege</button>
+      <button onclick="sendCommand('!spiele')">!spiele</button>
+      <input type="text" id="inputFight" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!fight', 'inputFight')">!fight</button>
+      <input type="text" id="inputDate" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!2date', 'inputDate')">!2date</button>
+      <input type="text" id="inputPlay2" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!2spielen', 'inputPlay2')">!2spielen</button>
+      <input type="text" id="inputAdopt" placeholder="Name für LunaMon">
+      <button onclick="sendCommandWithUser('!adoptieren', 'inputAdopt')">!adoptieren</button>
+      <input type="text" id="inputRename" placeholder="Neuer Name">
+      <button onclick="sendCommandWithUser('!rename', 'inputRename')">!rename</button>
+      <input type="text" id="inputTrain" placeholder="Wert">
+      <button onclick="sendCommandWithUser('!trainieren up', 'inputTrain')">!trainieren</button>
+    </div>
+
+    <div class="category"><h2>📈 Stats</h2>
+      <input type="text" id="inputTop1" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!toplunamon', 'inputTop1')">!toplunamon</button>
+      <input type="text" id="inputTop2" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!top', 'inputTop2')">!top</button>
+      <input type="text" id="inputLuna" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!meinlunamon', 'inputLuna')">!meinlunamon</button>
+    </div>
+
+    <div class="category"><h2>🎯 Specials</h2>
+      <button onclick="sendCommand('!würfeln')">!würfeln</button>
+      <input type="text" id="inputDuell" placeholder="Zuschauername">
+      <button onclick="sendCommandWithUser('!duell', 'inputDuell')">!duell</button>
+    </div>
+
+    <div class="category"><h2>🛒 Pokemon</h2>
+      <button onclick="sendCommand('!fangen !pokeball')">!fangen</button>
+      <input type="text" id="inputBuy" placeholder="poke|super|ultra|master">
+      <button onclick="sendCommandWithUser('!kaufen', 'inputBuy')">!kaufen</button>
+    </div>
+
+    <div class="category"><h2>🎰 Casino</h2>
+      <button onclick="sendCommand('!jackpot')">!jackpot</button>
+      <input type="text" id="inputRoulette" placeholder="z.B. 100">
+      <button onclick="sendCommandWithUser('!roulette', 'inputRoulette')">!roulette</button>
+      <input type="text" id="inputSlot" placeholder="z.B. 100">
+      <button onclick="sendCommandWithUser('!slot', 'inputSlot')">!slot</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
