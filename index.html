@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LunaMon MSS Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>LunaMon MSS Panel</h1>
+  <div id="status">🔑 Bitte mit Twitch verbinden...</div>
+  <button id="loginBtn">Mit Twitch verbinden</button>
+
+  <div id="controls" style="display:none;">
+    <p>Beispiel-Befehle:</p>
+    <button onclick="sendCommand('!lms')">!lms</button>
+    <button onclick="sendCommandWithUser('!duell', 'userDuell')">!duell [user]</button>
+    <input type="text" id="userDuell" placeholder="Username">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
